@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Proza+Libre:wght@700&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  color: var(--font-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --spacing-1: 8px;
+  --spacing-2: 12px;
+  --spacing-3: 16px;
+  --spacing-4: 24px;
+
+  --border-radius: 12px;
+
+  --font-color: whitesmoke;
+
+  --background-color: #201f2e;
+}
+
+.heart {
+  color: red;
+}
+
+h2 {
+  font-family: "Proza Libre", sans-serif;
+  margin: 0;
+  margin-bottom: var(--spacing-2);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0 var(--spacing-3);
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-3) 0;
+  width: 100%;
+}
+
+.navigation-items {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  align-items: center;
+  margin: 0;
+  margin-left: auto;
+}
+
+.navigation-item {
+  margin: var(--spacing-1);
+}
+
+.portrait {
+  width: 300px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.portrait img {
+  width: 250px;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+.about-me-container {
+  display: flex;
+}
+
+.about-me-text-container {
+  margin-right: var(--spacing-3);
+}
+
+.project-image {
+  position: relative;
+  width: 50%;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.project-title {
+  margin-bottom: 20px;
+}
+
+.project-title h3 {
+  display: inline;
+  margin-bottom: 10px;
+}
+
+.project-image:hover {
+  transform: scale(1.5);
+  margin-left: 100px;
+}
+
+details {
+  cursor: pointer;
+}
+
+summary {
+  list-style-type: '👉';
+}
+
+footer {
+  margin-top: auto;
+  padding: var(--spacing-2) 0;
+  text-align: center;
+}
+
+section {
+  padding: var(--spacing-3) 0;
+}
+
+.icon {
+  font-size: 2em;
+  color: var(--font-color);
+  margin: 0 var(--spacing-1);
+}
+
+a {
+  color: var(--font-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#logo {
+  margin: 0;
+}
+
+#skills-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#skills-container > * {
+  font-size: 2em;
+  width: 2em;
+  margin-top: var(--spacing-1);
+}
+
+span#time-container {
+  color: greenyellow;
+  font-weight: bolder;
+}
+
+@media only screen and (max-width: 600px) {
+  .about-me-container {
+    flex-direction: column;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  h2#logo {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .navigation-items {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #skills-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  #skills-container i {
+    margin-right: 1rem;
+  }
+
+}
