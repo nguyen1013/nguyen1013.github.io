@@ -110,6 +110,10 @@ nav {
   margin-left: 100px;
 }
 
+h3#git-link {
+  margin-top: 0;
+}
+
 details {
   cursor: pointer;
 }
@@ -146,15 +150,30 @@ a {
 
 #skills-container {
   display: flex;
-  width: 100%;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2em;
 }
 
-#skills-container > * {
+#skills-container a {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;    /* Center items horizontally */
+  text-decoration: none;  /* Remove underline from links */
+  margin-top: var(--spacing-1);
   font-size: 2em;
   width: 2em;
-  margin-top: var(--spacing-1);
+}
+
+#skills-container span {
+  font-size: 16px;       /* Set font size of span */
+  margin-top: 4px;       /* Add space between the icon and text */
+  text-align: center;    /* Center the text */
+}
+
+#skills-container i {
+  font-size: 36px;       /* Optional: Adjust the icon size */
 }
 
 span#time-container {
